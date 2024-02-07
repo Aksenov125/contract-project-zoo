@@ -4,7 +4,7 @@ const Layout = require("./Layout");
 function MainPage({}) {
   return (
     <Layout>
-      <div class="gradient-border">
+      <div class="gradient-border main">
         <img src="https://s2.stc.all.kpcdn.net/russia/wp-content/uploads/2019/04/Belyj-medved-v-zooparke.jpg" />
       </div>
       <div class="light x1"></div>

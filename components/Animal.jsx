@@ -4,7 +4,7 @@ function Animal({ animal }) {
   return (
     <div className="animalCard">
       <div className="animalImg">
-        {animal.Imgs.map((el) => <img src={el.url} />)}
+        <img className='solo-photo' src={animal.picture} alt="" />
       </div>
       <h2>{animal.name}</h2>
       <h3>{animal.description}</h3>
