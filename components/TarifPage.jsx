@@ -1,39 +1,39 @@
 const React = require("react");
 
-function TarifPage({}) {
+function TarifPage({tarif}) {
   return (
-    <div class="col-1-of-3">
-      <div class="card">
-        <div class="card__side card__side--front-1">
-          <div class="card__title card__title--1">
-            <i class="fas fa-paper-plane"></i>
-            <h4 class="card__heading">Basic</h4>
-          </div>
 
-          <div class="card__details">
-            <ul>
-              <li>1 Website</li>
-              <li>50 GB SSD Storage</li>
-              <li>Unmetered Bandwidth</li>
-              <li>Free SSL Certificate</li>
-              <li>1 Included Domain</li>
-              <li>1 Included Domain</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card__side card__side--back card__side--back-1">
-          <div class="card__cta">
-            <div class="card__price-box">
-              <p class="card__price-only">Only</p>
-              <p class="card__price-value">$2.95/mo*</p>
+      
+        <div className="col-1-of-3">
+          <div className="card">
+            <div className="card__side card__side--front-1">
+              <div className="card__title card__title--1">
+                <i className="fas fa-paper-plane"></i>
+                <h4 className="card__heading">{tarif.day}</h4>
+              </div>
+
+              <div className="card__details">
+                <ul>
+                  <li>{tarif.age}</li>
+
+
+                </ul>
+              </div>
             </div>
-            <a href="#popup" class="btn btn--white">
-              Select
-            </a>
+            <div className="card__side card__side--back card__side--back-1">
+              <div className="card__cta">
+                <div className="card__price-box">
+                  <p className="card__price-only">{tarif.day}</p>
+                  <p className="card__price-value">{tarif.price}</p>
+                </div>
+                <a href="#popup" className="btn btn--white">
+                  Купить
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+
   );
 }
 

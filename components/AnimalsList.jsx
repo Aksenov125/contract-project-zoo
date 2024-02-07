@@ -1,10 +1,12 @@
 const React = require('react');
 const Layout = require('./Layout');
 const Animal = require('./Animal');
+const Navbar = require('./Navbar');
 
 function AnimalsList({ title, animals }) {
   return (
     <Layout title={title}>
+      <Navbar></Navbar>
       <div className="animalsList">
         {animals.map((el) => <Animal animal={el} />)}
       </div>

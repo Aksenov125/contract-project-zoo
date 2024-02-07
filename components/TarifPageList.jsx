@@ -1,11 +1,19 @@
 const React = require("react");
 const Layout = require("./Layout");
 const TarifPage = require("./TarifPage");
+const Navbar = require("./Navbar");
 
-function TarifPageList({}) {
+function TarifPageList({tarifs}) {
   return (
     <Layout>
-<TarifPage></TarifPage>
+        <Navbar></Navbar>
+     <div className="row">
+        {tarifs.map((tarif) => (
+            <TarifPage key={tarif.id} tarif={tarif}/>
+        ))}
+        </div>
+       
+
     </Layout>
   );
 }
