@@ -1,4 +1,5 @@
-const React = require('react')
+const React = require('react');
+
 
 function Navbar({}){
 return(
@@ -11,4 +12,4 @@ return(
 )
 }
 
-module.exports = Navbar
+module.exports = Navbar;
