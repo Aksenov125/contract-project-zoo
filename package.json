@@ -1,4 +1,17 @@
 {
+  "name": "contract-project-zoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js --ext js,json,jsx"
+    
+    },
+    
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
