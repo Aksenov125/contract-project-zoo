@@ -7,6 +7,7 @@ return(
     <div className='navbar'>
       <a className='gradient-button' href="/animals">Животные</a>
       <a className='gradient-button' href="/tarifs">Тарифы</a>
+      <a className='gradient-button' href="/">Главная</a>
     </div>
     </nav>
 )

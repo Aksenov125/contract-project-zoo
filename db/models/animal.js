@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.TEXT
     },
+    picture: {
+      allowNull: false,
+      type: DataTypes.TEXT
+    },
   }, {
     sequelize,
     modelName: 'Animal',

@@ -19,9 +19,7 @@ module.exports = function Layout({ title, children}) {
         {/* <script defer src="/scripts/auth.js" /> */}
       </head>
       <body>
-        <header>
         <Navbar/>
-        </header>
         {children}
       </body>
     </html>
