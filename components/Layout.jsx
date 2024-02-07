@@ -8,6 +8,9 @@ module.exports = function Layout({ title, children}) {
         <title>{title}</title>
 
         <link rel="stylesheet" href="/styles/animals.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900" />
+        
+        
         <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet"></link>
         <link rel="stylesheet" href="/styles/navbar.css" />
         <link rel="stylesheet" href="/styles/custom.css" />
