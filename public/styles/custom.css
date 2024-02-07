@@ -1,3 +1,13 @@
-body{
-    
+* {box-sizing: border-box;}
+.gradient-border {
+  width: 1200px;
+  margin-top: 100px;
+margin-left: 350px;
+
+}
+.gradient-border img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50px;
 }
