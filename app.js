@@ -5,7 +5,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 
 // const getUser = require("./middleware/getUser");
-const indexRouter = require("./routes/index");
+const indexRouter = require("./routes/index.routers");
 const ssr = require("./middleware/ssr");
 // const { verifyAccessToken } = require("./middleware/verifyJWT");
 
