@@ -3,13 +3,13 @@ const Layout = require("./Layout");
 const TarifPage = require("./TarifPage");
 const Navbar = require("./Navbar");
 
-function TarifPageList({tarifs}) {
+function TarifPageList({tarifs, user}) {
   return (
     <Layout>
-        <Navbar></Navbar>
+        <Navbar user={user}></Navbar>
      <div className="row">
         {tarifs.map((tarif) => (
-            <TarifPage key={tarif.id} tarif={tarif}/>
+            <TarifPage key={tarif.id} tarif={tarif} user={user}/>
         ))}
         </div>
        

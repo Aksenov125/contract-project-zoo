@@ -2,12 +2,12 @@ const React = require("react");
 const Layout = require("./Layout");
 const Navbar = require("./Navbar");
 
-function MainPage({}) {
+function MainPage({user}) {
   return (
     <Layout>
       
       <div className="bg2">
-      <Navbar></Navbar>
+      <Navbar user={user}></Navbar>
         <div className="blog-card spring-fever">
           <div className="title-content">
             <h3>

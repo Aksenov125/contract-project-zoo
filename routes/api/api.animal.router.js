@@ -5,8 +5,11 @@ const AnimalCard = require('../../components/AnimalItem');
 
 router.post('/', async (req, res) => {
   try {
+    
+    let user = res.locals.user
     const { name, picture, description } = req.body;
     console.log(req.body);
+    if (user){
     if (name && picture && description) {
       const animal = await Animal.create({ name, picture, description });
       const newAnimal = await Animal.findOne({ where: { id: animal.id } });
@@ -15,6 +18,7 @@ router.post('/', async (req, res) => {
     } else {
       res.json({ message: 'Заполните все поля!!!!!!' });
     }
+  }
   } catch ({ message }) {
     res.json({ message });
   }
@@ -22,11 +26,14 @@ router.post('/', async (req, res) => {
 
 router.delete('/:animalId', async (req, res) => {
   try {
+    let user = res.locals.user
     const { animalId } = req.params;
+    if(user){
     const animal = await Animal.destroy({ where: { id: animalId } });
     if (animal) {
       res.json({ message: 'ok' });
     }
+  }
   } catch ({ message }) {
     res.json({ message });
   }
@@ -34,8 +41,10 @@ router.delete('/:animalId', async (req, res) => {
 
 router.put('/:animalId', async (req, res) => {
   try {
+    let user = res.locals.user
     const { animalId } = req.params;
     const { picture, name, description } = req.body;
+    if(user){
     if (picture && name && description) {
       const animal = await Animal.update(
         { picture, name, description },
@@ -45,6 +54,7 @@ router.put('/:animalId', async (req, res) => {
     } else {
       res.json({ message: 'Заполните все поля' });
     }
+  }
   } catch ({ message }) {
     res.json({ message });
   }

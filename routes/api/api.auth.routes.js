@@ -76,9 +76,5 @@ router.post("/sign-up", async (req, res) => {
   }
 });
 
-router.get("/logout", (req, res) => {
-  res.clearCookie(configJWT.access.type).clearCookie(configJWT.refresh.type);
-  res.redirect("/");
-});
 
 module.exports = router;
