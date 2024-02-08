@@ -4,7 +4,7 @@ if (btndelete) {
     const {id} = e.target.dataset
     console.log(id);
     e.target.classList.contains("delete");
-     const res = await fetch(`api/animals/${id}`, {
+     const res = await fetch(`/api/animals/${id}`, {
       method: "delete",
     });
     const data = await res.json()
