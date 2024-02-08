@@ -1,4 +1,4 @@
-const router = require("express").Router();
+const router = require('express').Router();
 
 const { Animal } = require('../../db/models');
 const AnimalCard = require('../../components/AnimalItem');
@@ -21,15 +21,32 @@ router.post('/', async (req, res) => {
 });
 
 router.delete('/:animalId', async (req, res) => {
-    try {
-      const { animalId } = req.params;
-      const animal = await Animal.destroy({ where: { id: animalId} });
-      if(animal){
-        res.json({message : 'ok'})
-      }
-    } catch ({ message }) {
-      res.json({ message });
+  try {
+    const { animalId } = req.params;
+    const animal = await Animal.destroy({ where: { id: animalId } });
+    if (animal) {
+      res.json({ message: 'ok' });
     }
-  });
+  } catch ({ message }) {
+    res.json({ message });
+  }
+});
 
-module.exports = router
+router.put('/:animalId', async (req, res) => {
+  try {
+    const { animalId } = req.params;
+    const { picture, name, description } = req.body;
+    if (picture && name && description) {
+      const animal = await Animal.update(
+        { picture, name, description },
+        { where: { id: animalId } },
+      );
+      res.json({ animal });
+    } else {
+      res.json({ message: 'Заполните все поля' });
+    }
+  } catch ({ message }) {
+    res.json({ message });
+  }
+});
+module.exports = router;
