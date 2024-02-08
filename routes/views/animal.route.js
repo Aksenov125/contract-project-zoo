@@ -31,7 +31,7 @@ router.get('/:animalId/formUpdate', async (req, res) => {
 router.get('/:animalId/animal', async (req, res) => {
   try {
     const { animalId } = req.params;
-    const animal = await Animal.findOne({ where: { id: animalId } });
+    const animal = await Animal.findOne({ where: { id: animalId },include:{model:Img} });
     const html = res.renderComponent(AnimalPage, {
       title: 'животные',
       animal,
