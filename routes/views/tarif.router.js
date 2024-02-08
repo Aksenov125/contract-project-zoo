@@ -5,7 +5,7 @@ const router = require("express").Router();
 
 router.get("/", async (req, res) => {
   try {
-    const tarifs = await Tarif.findAll()
+    const tarifs = await Tarif.findAll({order: [['id', 'ASC']]})
     const html = res.renderComponent(TarifPageList, { title: "", tarifs });
     res.send(html);
   } catch ({ message }) {

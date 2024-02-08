@@ -1,13 +1,13 @@
-const addAnimal = document.querySelector('.addAnimal');
-const animalList = document.querySelector('.animalsList');
+const addAnimal = document.querySelector(".addAnimal");
+const animalList = document.querySelector(".animalsList");
 if (addAnimal) {
-  addAnimal.addEventListener('submit', async (e) => {
+  addAnimal.addEventListener("submit", async (e) => {
     e.preventDefault();
     const { name, picture, description } = e.target;
-    const res = await fetch('/api/animals', {
-      method: 'POST',
+    const res = await fetch("/api/animals", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         name: name.value,
@@ -16,13 +16,13 @@ if (addAnimal) {
       }),
     });
     const data = await res.json();
-console.log(data);
+    console.log(data);
     e.target.reset();
-    if (data.message === 'ок') {
-      animalList.insertAdjacentHTML('beforeend', data.html);
-      document.querySelector('.errAnimal').innerHTML = '';
+    if (data.message === "ок") {
+      animalList.insertAdjacentHTML("beforeend", data.html);
+      document.querySelector(".errAnimal").innerHTML = "";
     } else {
-      document.querySelector('.errAnimal').innerHTML = data.message;
+      document.querySelector(".errAnimal").innerHTML = data.message;
     }
   });
 }

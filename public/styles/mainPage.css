@@ -76,7 +76,7 @@ color:#fff;
 }
 
 .blog-card h3,h1 {
-  font-size: 1.9em;
+  font-size: 5em;
   font-weight: 400;
   letter-spacing: 1px;
   font-family: 'Abril Fatface', serif;
@@ -274,6 +274,13 @@ h3:after {
 }
 .intro{
   font-size:0.8em
+}
+.text--size, .animal-des{
+  font-size: 20px;
+}
+.animal-des{
+  font-size: 20px;
+
 }
 }
 

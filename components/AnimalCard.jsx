@@ -5,8 +5,8 @@ function AnimalCard({ animal, user }) {
     <div className="card">
       <img className="card-image" src={animal.picture} alt="Животное" />
       <div className="card-content">
-        <h3>{animal.name}</h3>
-        <a className="btn" href={`/animals/${animal.id}/animal`}>
+        <h3 className="text--size">{animal.name}</h3>
+        <a className="btn-podrobnee" href={`/animals/${animal.id}/animal`}>
           Подробнее
         </a>
 

@@ -54,7 +54,7 @@ router.post("/sign-up", async (req, res) => {
         res.json({ type: "blabla", message: "Некорректный формат email" });
         return;
       }
-      user = await User.findOne({ where: { name } });
+      user = await User.findOne({ where: { email } });
       if (user) {
         res.json({ message: "Такой пользователь уже есть!" });
         return;
