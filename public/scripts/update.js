@@ -1,27 +1,32 @@
-const updatephotobtn = document.querySelector(".update-photo");
-if (updatephotobtn) {
-    updatephotobtn.addEventListener("submit", async (e) => {
+const updateAnimal = document.querySelector('.updateAnimal');
+// console.log(updateAnimal);
+if (updateAnimal) {
+  // console.log(updateAnimal);
+  updateAnimal.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const { title, img, description } = e.target;
+    const { picture, name, description } = e.target;
+    console.log(description.value);
     const { id } = e.target.dataset;
-    const res =  await fetch(`/photos/${id}`, {
-      method: "put",
+
+    const res = await fetch(`/api/animals/${id}`, {
+      method: 'PUT',
       headers: {
-        "Content-type": "application/json",
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify ({
-        title: title.value,
-        img: img.value,
+      body: JSON.stringify({
+        picture: picture.value,
+        name: name.value,
         description: description.value,
       }),
     });
-    console.log(res);
-    const data = await res.json()
-    if(data.message === 'ok'){
-      window.location.assign("/photos")
-    }else{
-      alert(data.message)
+    const data = await res.json();
+    console.log(data);
+    if ('animal' in data && data.animal[0]) {
+      window.location.assign('/animals');
+    } else if ('message' in data) {
+      document.querySelector('.errUpdateAnimal').innerHTML = data.message;
+    } else {
+      document.querySelector('.errUpdateAnimal').innerHTML = 'Извините, сервер недоступен';
     }
-
   });
 }

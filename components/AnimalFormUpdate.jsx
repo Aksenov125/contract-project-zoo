@@ -8,11 +8,11 @@ function AnimalFormUpdate({title, animal}) {
         <p>Изменение животного</p>
         <input name="picture" placeholder="img" defaultValue={animal.picture} />
         <br />
-        <input name="name" placeholder="name" />
+        <input name="name" placeholder="name" defaultValue={animal.name} />
         <br />
-        <input name="description" placeholder="description" />
+        <input name="description" placeholder="description" defaultValue={animal.description} />
         <br />
-        <button className="UAnimalButton">Изменить</button>
+        <button className="UpdateAnimalButton">Изменить</button>
         <div className="errUpdateAnimal" />
       </form>
     </Layout>
