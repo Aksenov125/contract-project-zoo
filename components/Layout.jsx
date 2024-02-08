@@ -19,6 +19,7 @@ module.exports = function Layout({ title, children}) {
         <link rel="stylesheet" href="/styles/mainPage.css" />
         <link rel="stylesheet" href="/styles/animatoinBg.css" />
         <link rel="stylesheet" href="/styles/animal.css" />
+        <link rel="stylesheet" href="/styles/formadd.css" />
 
         
 
