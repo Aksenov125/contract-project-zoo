@@ -4,21 +4,25 @@ const Layout = require("./Layout");
 function SignInPage() {
   return (
     <Layout>
-      <div className="row">
-    <form className="col s12 sign-in">
-      <div className="row">
-        <div className="input-field col s6">
-          <input placeholder="Имя" id="first_name" type="text" name='name'className="validate"/>
-        </div>
-      </div>
-      <div className="row">
-        <div className="input-field col s6">
-          <input placeholder="Пароль" id="first_name" type="password" name="password" className="validate"/>
-        </div>
-      </div>
-      <button class="waves-effect waves-light btn-small">Войти</button>
-    </form>
+      <div className="container">
+      <form className="sign-in">
+<div class="form">
+  <div class="subtitle">Вход</div>
+  <div class="input-container ic1">
+    <input id="firstname" class="input" type="text" name="name" placeholder=" " />
+    <div class="cut"></div>
+    <label for="firstname" class="placeholder">Имя</label>
   </div>
+  <div class="input-container ic2">
+    <input id="lastname" class="input" type="text" name="password" placeholder=" " />
+    <div class="cut"></div>
+    <label for="lastname" class="placeholder">Пароль</label>
+  </div>
+  <button type="text" class="submit">Войти</button>
+  <div className="subtitle errtextIn"></div>
+</div>
+</form>
+</div>
       
     </Layout>
   );

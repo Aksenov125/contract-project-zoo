@@ -1,6 +1,5 @@
 const signInForm = document.querySelector(".sign-in");
 const signUpForm = document.querySelector(".sign-up");
-const err = document.querySelector(".error-pass");
 
 if (signInForm) {
   signInForm.addEventListener("submit", async (e) => {
@@ -20,13 +19,16 @@ if (signInForm) {
     const data = await res.json();
     if (data.message === "success") {
       window.location.assign("/");
+    } else if ("message" in data) {
+      document.querySelector(".errtextIn").innerHTML = data.message;
     } else {
-      alert(data.message);
+      document.querySelector(".errtextIn").innerHTML =
+        "Извините, сервер недоступен";
     }
   });
 }
-console.log(123);
-console.log(signUpForm);
+  
+
 if (signUpForm) {
   signUpForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -48,11 +50,14 @@ if (signUpForm) {
 
       if (data.message === "success") {
         window.location.assign("/");
+      } else if ("message" in data) {
+        document.querySelector(".errtextUp").innerHTML = data.message;
       } else {
-        alert(data.message);
+        document.querySelector(".errtextUp").innerHTML =
+          "Извините, сервер недоступен";
       }
     } else {
-      err.innerHTML = "Ваши пароли не совпадают";
+      document.querySelector(".errtextUp").innerHTML = "Ваши пароли не совпадают";
     }
   });
 }

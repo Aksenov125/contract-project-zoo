@@ -23,6 +23,11 @@ if (updateTarif) {
     console.log(data.message);
     if (data.message === 'ok') {
       window.location.assign("/tarifs");
+    }else if ("message" in data){
+      document.querySelector('.errtextTarif').innerHTML = data.message
+    } else {
+      document.querySelector(".errUpdateAnimal").innerHTML =
+        "Извините, сервер недоступен";
     }
 
   });

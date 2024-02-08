@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
     const { name, picture, description } = req.body;
     console.log(req.body);
     if (user){
-    if (name && picture && description) {
+    if (name.trim() !== "" && picture.trim() !== "" && description.trim() !== "" && name.trim() === name && picture.trim() === picture && description.trim() === description) {
       const animal = await Animal.create({ name, picture, description });
       const newAnimal = await Animal.findOne({ where: { id: animal.id } });
       const html = res.renderComponent(AnimalCard, { animal: newAnimal });
@@ -60,3 +60,10 @@ router.put('/:animalId', async (req, res) => {
   }
 });
 module.exports = router;
+
+
+
+
+
+
+
