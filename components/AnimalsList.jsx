@@ -4,13 +4,13 @@ const Animal = require('./AnimalCard');
 const Navbar = require('./Navbar');
 const AddFormItem = require('./AddFormItem');
 
-function AnimalsList({ title, animals }) {
+function AnimalsList({ title, animals,user }) {
   return (
     <Layout title={title}>
-      <Navbar></Navbar>
-      <AddFormItem></AddFormItem>
+      <Navbar user={user}></Navbar>
+      <AddFormItem user={user}></AddFormItem>
       <div className="animalsList">
-        {animals.map((el) => <Animal animal={el} />)}
+        {animals.map((el) => <Animal animal={el} user={user}/>)}
       </div>
     </Layout>
 

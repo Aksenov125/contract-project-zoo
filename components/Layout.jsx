@@ -20,6 +20,9 @@ module.exports = function Layout({ title, children}) {
         <link rel="stylesheet" href="/styles/animatoinBg.css" />
         <link rel="stylesheet" href="/styles/animal.css" />
         <link rel="stylesheet" href="/styles/formadd.css" />
+        <link rel="stylesheet" href="/styles/descriptionAnimals.css" />
+
+        
 
         
 
@@ -28,6 +31,8 @@ module.exports = function Layout({ title, children}) {
         <script defer src="/scripts/update.js" />
         <script defer src="/scripts/auth.js" />
         <script defer src="/scripts/slider.js" />
+        <script defer src="/scripts/updateTarif.js" />
+
       </head>
       <body>
         {/* <Navbar/> */}

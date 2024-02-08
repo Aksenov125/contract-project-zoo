@@ -1,13 +1,11 @@
-const React = require('react');
-const Layout = require('./Layout');
+const React = require("react");
+const Layout = require("./Layout");
 
-function AnimalItem({ animal, img}) {
+function AnimalItem({ animal, img }) {
   return (
-
-      <img src={img.url} alt={animal.name}/>
-
-
-      
+    <>
+      <img className="card-image" src={img.url} alt={animal.name} />
+    </>
   );
 }
 
