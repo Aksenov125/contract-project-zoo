@@ -29,3 +29,6 @@
   button:hover {
     background-color: #2980b9;
   }
+  .errtextTarif, .errtextIn, .errtextUp{
+    color: red;
+  }

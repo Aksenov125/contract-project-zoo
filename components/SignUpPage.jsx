@@ -28,7 +28,9 @@ function SignUpPage() {
     <label for="email" class="placeholder">Email</label>
   </div>
   <button type="text" class="submit">Зарегистрироваться</button>
+  <div className="subtitle errtextUp"></div>
 </div>
+
 </form>
 </div>
     </Layout>
