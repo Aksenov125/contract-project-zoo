@@ -1,6 +1,6 @@
 const React = require('react');
 const Layout = require('./Layout');
-const Animal = require('./Animal');
+const Animal = require('./AnimalCard');
 const Navbar = require('./Navbar');
 
 function AnimalsList({ title, animals }) {

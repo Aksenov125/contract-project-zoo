@@ -3,6 +3,7 @@
   flex-wrap: wrap;
  
 }
+
 .card {
   position: relative;
   width: 300px;
@@ -44,3 +45,4 @@
   font-weight: bold;
   cursor: pointer;
 }
+

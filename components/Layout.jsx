@@ -18,15 +18,18 @@ module.exports = function Layout({ title, children}) {
         <link rel="stylesheet" href="/styles/custom.css" />
         <link rel="stylesheet" href="/styles/mainPage.css" />
         <link rel="stylesheet" href="/styles/animatoinBg.css" />
+        <link rel="stylesheet" href="/styles/animal.css" />
+
+        
 
         {/* <script defer src="/scripts/add.js" /> */}
-        {/* <script defer src="/scripts/delete.js" /> */}
+        <script defer src="/scripts/delete.js" />
         {/* <script defer src="/scripts/update.js" /> */}
         <script defer src="/scripts/auth.js" />
       </head>
       <body>
-        <AnimationItem></AnimationItem>
         {/* <Navbar/> */}
+        <AnimationItem></AnimationItem>
         {children}
       </body>
     </html>
