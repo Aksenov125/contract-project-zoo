@@ -10,7 +10,7 @@ function AddFormItem({user}) {
    </div>
    <div className="form-group">
      <label htmlFor="input2">Фото животного:</label>
-     <input name="picture" />
+     <input name="picture" type='file' multiple />
    </div>
    <div className="form-group">
      <label htmlFor="input3">Описание животного:</label>

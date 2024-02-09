@@ -1,25 +1,38 @@
 const router = require('express').Router();
-
-const { Animal } = require('../../db/models');
-const AnimalCard = require('../../components/AnimalItem');
+const fileupload = require('../../utils/fileupload');
+const { Animal, Img } = require('../../db/models');
+const AnimalCard = require('../../components/AnimalCard');
 
 router.post('/', async (req, res) => {
   try {
     
     let user = res.locals.user
-    const { name, picture, description } = req.body;
-    console.log(req.body);
+    const { name, description } = req.body;
+    console.log(req.body,'111');
+    const file = req.files.url;
+    console.log(file, '----');
     if (user){
-    if (name && picture && description) {
-      const animal = await Animal.create({ name, picture, description });
-      const newAnimal = await Animal.findOne({ where: { id: animal.id } });
-      const html = res.renderComponent(AnimalCard, { animal: newAnimal });
+    if (name && file && description) {
+      const animal = await Animal.create({ name, description });
+      if(file.length) {
+        const arrUrl = await Promise.all(
+          file.map( async (el) => await fileupload(el)))
+        await Promise.all(
+        arrUrl.map( async (el) => await Img.create({url: el, animalId:animal.id}) ))
+      } else {
+        const picture = await fileupload(file)
+        await Img.create({url: picture, animalId:animal.id})
+       }
+      const newAnimal = await Animal.findOne({ where: { id: animal.id }, include: {model: Img} });
+      const html = res.renderComponent(AnimalCard, { animal: newAnimal }, { doctype: false });
       res.json({ html, message: 'ок' });
+      
     } else {
       res.json({ message: 'Заполните все поля!!!!!!' });
     }
   }
   } catch ({ message }) {
+
     res.json({ message });
   }
 });
@@ -43,14 +56,15 @@ router.put('/:animalId', async (req, res) => {
   try {
     let user = res.locals.user
     const { animalId } = req.params;
-    const { picture, name, description } = req.body;
+    const {  name, description } = req.body;
     if(user){
-    if (picture && name && description) {
+    if (name && description) {
       const animal = await Animal.update(
-        { picture, name, description },
+        { name, description },
         { where: { id: animalId } },
       );
       res.json({ animal });
+
     } else {
       res.json({ message: 'Заполните все поля' });
     }

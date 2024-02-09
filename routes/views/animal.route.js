@@ -6,7 +6,7 @@ const { Animal, Img } = require('../../db/models');
 
 router.get('/', async (req, res) => {
   try {
-    const animals = await Animal.findAll({ order: [['id', 'ASC']] });
+    const animals = await Animal.findAll({ order: [['id', 'ASC']] , include: {model: Img}});
     const html = res.renderComponent(AnimalsList, {
       title: 'животные',
       animals,

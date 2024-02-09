@@ -4,19 +4,19 @@ if (addAnimal) {
   addAnimal.addEventListener('submit', async (e) => {
     e.preventDefault();
     const { name, picture, description } = e.target;
+    const formData = new FormData()
+    const picturesData = [...picture.files]
+    picturesData.forEach((url)=> {
+      formData.append('url', url)
+    })
+    formData.append('name', name.value);
+    formData.append('description', description.value);
     const res = await fetch('/api/animals', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: name.value,
-        picture: picture.value,
-        description: description.value,
-      }),
+      body: formData,
     });
+   
     const data = await res.json();
-console.log(data);
     e.target.reset();
     if (data.message === 'ок') {
       animalList.insertAdjacentHTML('beforeend', data.html);
