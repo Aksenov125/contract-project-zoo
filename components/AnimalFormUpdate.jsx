@@ -5,13 +5,13 @@ function AnimalFormUpdate({ title, animal }) {
   return (
     <Layout title={title}>
       <div className="container">
-        <form className="updateAnimal form" data-id={animal.id}>
+        <form className="updateAnimal form" data-id={animal.id} data-img={animal.Imgs}>
           <div className="subtitle">Изменение животного</div>
-          <div className="input-container ic1">
-            <input name="picture" className="input" placeholder="img" defaultValue={animal.picture} />
-            <div className="cut" />
-            <label className="placeholder">Фото</label>
-          </div>
+          {/* <div className="input-container ic1">
+            <input name="picture" className="input" placeholder="img" defaultValue={animal.Imgs} type='file' multiple  />
+            <div className="cut" /> */}
+            {/* <label className="placeholder">Фото</label>
+          </div> */}
           <div className="input-container ic2">
             <input name="name" className="input" placeholder="name" defaultValue={animal.name} />
             <div className="cut" />

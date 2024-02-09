@@ -3,7 +3,7 @@ const express = require('express');
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
-
+const fileUpload = require('express-fileupload')
 const getUser = require("./middleware/getUser");
 
 const indexRouter = require("./routes/index.routers");
@@ -14,6 +14,7 @@ const { verifyAccessToken } = require("./middleware/verifyJWT");
 const PORT = 4000;
 const app = express();
 
+app.use(fileUpload())
 app.use(cookieParser()); // jwt должен быть ниже// раскрывает cookie на сервере
 app.use(express.urlencoded({ extended: 'true' })); // //middleware должны быть над routes
 app.use(express.json()); // при использовании fetch раскрываем undefined из body
