@@ -14,12 +14,12 @@ function Page404({title}) {
                 </div>
 
                 <div class="contant_box_404">
-                  <h3 class="h2">Похоже ты потерян</h3>
+                  <h2 class="h2" style={{color:'red'}}>Похоже ты потерян</h2>
 
                   <p>страница, которую вы ищете, недоступна!</p>
 
                   <a href="/" class="link_404">
-                    Go to Home
+                    Вернуться домой
                   </a>
                 </div>
               </div>
