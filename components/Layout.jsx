@@ -11,7 +11,9 @@ module.exports = function Layout({ title, children}) {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100" ></link>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"/>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arvo'></link>
         
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'></link>
         <link rel="stylesheet" href="/styles/animals.css" />
         <link rel="stylesheet" href="/styles/tarif.css" />
         <link rel="stylesheet" href="/styles/navbar.css" />

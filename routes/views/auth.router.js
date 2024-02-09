@@ -5,12 +5,12 @@ const SignUpPage = require("../../components/SignUpPage");
 const configJWT = require("../../middleware/configJWT");
 
 router.get("/sign-in", (req, res) => {
-  const html = res.renderComponent(SignInPage, { title: "sign-in" });
+  const html = res.renderComponent(SignInPage, { title: "Вход" });
   res.send(html);
 });
 
 router.get("/sign-up", (req, res) => {
-  const html = res.renderComponent(SignUpPage, { title: "sign-up" });
+  const html = res.renderComponent(SignUpPage, { title: "Регистрация" });
   res.send(html);
 });
 

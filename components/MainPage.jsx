@@ -2,9 +2,9 @@ const React = require("react");
 const Layout = require("./Layout");
 const Navbar = require("./Navbar");
 
-function MainPage({user}) {
+function MainPage({user, title}) {
   return (
-    <Layout>
+    <Layout title={title}>
       
       <div className="bg2">
       <Navbar user={user}></Navbar>

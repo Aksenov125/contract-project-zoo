@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   try {
     const animals = await Animal.findAll({ order: [['id', 'ASC']] , include: {model: Img}});
     const html = res.renderComponent(AnimalsList, {
-      title: 'животные',
+      title: 'Зверьки зоопарка',
       animals,
     });
     res.send(html);
@@ -31,9 +31,9 @@ router.get('/:animalId/formUpdate', async (req, res) => {
 router.get('/:animalId/animal', async (req, res) => {
   try {
     const { animalId } = req.params;
-    const animal = await Animal.findOne({ where: { id: animalId },include:{model:Img} });
+    const animal = await Animal.findOne({ title:'Зверёк', where: { id: animalId },include:{model:Img} });
     const html = res.renderComponent(AnimalPage, {
-      title: 'животные',
+      title: 'Зверёк',
       animal,
     });
     res.send(html);

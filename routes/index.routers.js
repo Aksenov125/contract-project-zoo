@@ -5,6 +5,7 @@ const mainPage = require('./views/main.router')
 const animalsRouter = require('./views/animal.route');
 const tarifRouter = require('./views/tarif.router')
 const authRouter = require('./views/auth.router')
+const OshRouter = require('./views/404.router')
 
 const authApiRouter = require('./api/api.auth.routes')
 const animalApiRouter = require('./api/api.animal.router')
@@ -18,6 +19,8 @@ router.use('/auth', authRouter)
 router.use('/api/auth', authApiRouter)
 router.use('/api/animals', animalApiRouter)
 router.use('/api/tarifs', tarifsApiRouter)
+
+router.use('*', OshRouter)
 
 
 
