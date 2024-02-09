@@ -8,7 +8,7 @@ router.put('/:tarifsId', async (req, res) => {
       const { tarifsId } = req.params;
       const { price, day, age } = req.body;
       if(user){
-      if (price && day && age) {
+      if (price.trim() !== "" && day.trim() !== "" && age.trim() !== "" &&  price.trim() === price && day.trim() === day && age.trim() === age ) {
         const tarif = await Tarif.update(
           { price, day, age },
           { where: { id: tarifsId } },

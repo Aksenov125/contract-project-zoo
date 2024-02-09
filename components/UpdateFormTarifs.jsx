@@ -11,7 +11,6 @@ function UpdateFormTarifs({ title, tarifs }) {
             <input
               name="day"
               className="input"
-              placeholder="img"
               defaultValue={tarifs.day}
             />
             <div className="cut" />
@@ -21,7 +20,6 @@ function UpdateFormTarifs({ title, tarifs }) {
             <input
               name="age"
               className="input"
-              placeholder="name"
               defaultValue={tarifs.age}
             />
             <div className="cut" />
@@ -31,7 +29,6 @@ function UpdateFormTarifs({ title, tarifs }) {
             <input
               name="price"
               className="input"
-              placeholder="description"
               defaultValue={tarifs.price}
             />
             <div className="cut" />
@@ -39,8 +36,11 @@ function UpdateFormTarifs({ title, tarifs }) {
           </div>
           <button className="UpdateAnimalButton submit">Изменить</button>
           <div className="errUpdateAnimal" />
+          <div className="subtitle errtextTarif"></div>
         </form>
+
       </div>
+
     </Layout>
   );
 }

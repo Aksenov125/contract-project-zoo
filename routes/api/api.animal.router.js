@@ -12,7 +12,8 @@ router.post('/', async (req, res) => {
     const file = req.files.url;
     console.log(file, '----');
     if (user){
-    if (name && file && description) {
+
+    if (name.trim() && file.trim() && description.trim()) {
       const animal = await Animal.create({ name, description });
       if(file.length) {
         const arrUrl = await Promise.all(
@@ -74,3 +75,10 @@ router.put('/:animalId', async (req, res) => {
   }
 });
 module.exports = router;
+
+
+
+
+
+
+
