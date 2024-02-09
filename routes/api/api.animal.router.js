@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     console.log(file, '----');
     if (user){
 
-    if (name.trim() && file.trim() && description.trim()) {
+    if (name.trim() && file && description.trim()) {
       const animal = await Animal.create({ name, description });
       if(file.length) {
         const arrUrl = await Promise.all(

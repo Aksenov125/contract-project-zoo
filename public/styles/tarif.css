@@ -154,8 +154,8 @@
   
   .card__side {
     height: 52rem;
-    -webkit-transition: all 0.8s ease;
-    transition: all 0.8s ease;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -306,8 +306,10 @@
   
   .row {
     max-width: 114rem;
+    width: 100%;
     margin: 0 auto;
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
   
@@ -316,17 +318,17 @@
     margin-top: 5rem;
   }
   
-  .row::after {
+  /* .row::after {
     content: "";
     display: table;
     clear: both;
-  }
+  } */
   
   .row [class^="col-"] {
     float: left;
   }
   
-  .row [class^="col-"]:not(:last-child) {
+  .row [class^="col-"] {
     margin-right: 6rem;
   }
   
@@ -334,3 +336,9 @@
     width: calc((100% - 2 * 6rem) / 3);
   }
   
+  .center-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
