@@ -1,7 +1,7 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-function Page404({title}) {
+function page404({title}) {
   return (
     <Layout title={title}>
       <section class="page_404">
@@ -31,4 +31,4 @@ function Page404({title}) {
   );
 }
 
-module.exports = Page404;
+module.exports = page404;
