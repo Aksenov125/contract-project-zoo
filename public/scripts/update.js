@@ -4,8 +4,8 @@ if (updateAnimal) {
   // console.log(updateAnimal);
   updateAnimal.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const { picture, name, description } = e.target;
-    console.log(description.value);
+    const { name, description } = e.target;
+   
     const { id } = e.target.dataset;
 
     const res = await fetch(`/api/animals/${id}`, {
@@ -14,7 +14,6 @@ if (updateAnimal) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        picture: picture.value,
         name: name.value,
         description: description.value,
       }),
