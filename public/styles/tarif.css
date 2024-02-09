@@ -173,15 +173,15 @@
   }
   
   .card__side--front-1 {
-    background: linear-gradient(-45deg, #f403d1, #64b5f6);
+    background: linear-gradient(-45deg, #64b5f6, #0d8a2f);
   }
   
   .card__side--front-2 {
-    background: linear-gradient(-45deg, #f321d7, #ffec61);
+    background: linear-gradient(-45deg, #3760d8, #58af21);
   }
   
   .card__side--front-3 {
-    background: linear-gradient(-45deg, #24ff72, #9a4eff);
+    background: linear-gradient(-45deg, #24ff72, #855bba);
   }
   
   .card__side--back {
@@ -190,11 +190,11 @@
   }
   
   .card__side--back-1 {
-    background: linear-gradient(-45deg, #64b5f6, #f403d1);
+    background: linear-gradient(-45deg, #64b5f6, #0d8a2f);
   }
   
   .card__side--back-2 {
-    background: linear-gradient(-45deg, #ffec61, #f321d7);
+    background: linear-gradient(-45deg, #4faf3a, #2e36d3);
   }
   
   .card__side--back-3 {

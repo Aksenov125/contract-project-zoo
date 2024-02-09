@@ -1,9 +1,10 @@
-const addAnimal = document.querySelector('.addAnimal');
-const animalList = document.querySelector('.animalsList');
+const addAnimal = document.querySelector(".addAnimal");
+const animalList = document.querySelector(".animalsList");
 if (addAnimal) {
-  addAnimal.addEventListener('submit', async (e) => {
+  addAnimal.addEventListener("submit", async (e) => {
     e.preventDefault();
     const { name, picture, description } = e.target;
+
     const formData = new FormData()
     const picturesData = [...picture.files]
     picturesData.forEach((url)=> {
@@ -17,12 +18,13 @@ if (addAnimal) {
     });
    
     const data = await res.json();
+
     e.target.reset();
-    if (data.message === 'ок') {
-      animalList.insertAdjacentHTML('beforeend', data.html);
-      document.querySelector('.errAnimal').innerHTML = '';
+    if (data.message === "ок") {
+      animalList.insertAdjacentHTML("beforeend", data.html);
+      document.querySelector(".errAnimal").innerHTML = "";
     } else {
-      document.querySelector('.errAnimal').innerHTML = data.message;
+      document.querySelector(".errAnimal").innerHTML = data.message;
     }
   });
 }

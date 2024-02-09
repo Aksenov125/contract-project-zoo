@@ -21,8 +21,8 @@ function AnimalPage({ title, animal, user }) {
           &gt;
         </button>
         <div className="card-content">
-        <h3>{animal.name}</h3>
-        <p>{animal.description}</p>
+        <h3 className="text--size">{animal.name}</h3>
+        <p className="animal-des">{animal.description}</p>
       </div>
         </div>
         </div>

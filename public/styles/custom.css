@@ -1,22 +1,21 @@
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .gradient-border {
   width: 900px;
   display: flex;
   justify-content: center;
-
-
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   padding-top: 50px;
-
 }
 .gradient-border img {
   max-width: 100%;
@@ -138,10 +137,45 @@
 p {
   margin-bottom: 0;
 }
-a, a:link, a:hover, a:visited {
-  color: #808097;
+a,
+a:link,
+a:hover,
+a:visited {
+  color: #ffffff;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+}
+
+.btn-podrobnee {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0c7625;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-podrobnee:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: 1ms ease-in-out;
+}
+
+.btn-podrobnee:hover {
+  color: #a1c0d5;
+}
+
+.btn-podrobnee:hover:before {
+  width: 100%;
 }

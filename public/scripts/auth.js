@@ -13,7 +13,7 @@ if (signInForm) {
       body: JSON.stringify({
         name: name.value,
         password: password.value,
-        isAdmin: true
+        isAdmin: true,
       }),
     });
     const data = await res.json();
@@ -27,12 +27,11 @@ if (signInForm) {
     }
   });
 }
-  
 
 if (signUpForm) {
   signUpForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const { name, password, password2, email} = e.target;
+    const { name, password, password2, email } = e.target;
     console.log(name.value);
     if (password.value === password2.value) {
       const res = await fetch("/api/auth/sign-up", {
@@ -57,7 +56,8 @@ if (signUpForm) {
           "Извините, сервер недоступен";
       }
     } else {
-      document.querySelector(".errtextUp").innerHTML = "Ваши пароли не совпадают";
+      document.querySelector(".errtextUp").innerHTML =
+        "Ваши пароли не совпадают";
     }
   });
 }
