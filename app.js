@@ -1,4 +1,5 @@
 require('@babel/register'); //
+require('dotenv').config()
 const express = require('express');
 
 const path = require('path');
@@ -11,7 +12,7 @@ const ssr = require("./middleware/ssr");
 
 const { verifyAccessToken } = require("./middleware/verifyJWT");
 
-const PORT = 4000;
+const PORT = process.env.PORT ||4000;
 const app = express();
 
 app.use(fileUpload())
