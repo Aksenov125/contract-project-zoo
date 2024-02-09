@@ -1,8 +1,8 @@
 const React = require("react");
 const Layout = require("./Layout");
-function SignUpPage() {
+function SignUpPage({title}) {
   return (
-    <Layout>
+    <Layout title={title}>
       <div className="container">
       <form className="sign-up">
 <div class="form">

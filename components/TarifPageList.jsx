@@ -3,9 +3,9 @@ const Layout = require("./Layout");
 const TarifPage = require("./TarifPage");
 const Navbar = require("./Navbar");
 
-function TarifPageList({tarifs, user}) {
+function TarifPageList({tarifs, user, title}) {
   return (
-    <Layout>
+    <Layout title={title}>
         <Navbar user={user}></Navbar>
      
      <div className="row">
