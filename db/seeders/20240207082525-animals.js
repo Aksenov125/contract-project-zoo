@@ -41,8 +41,38 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      name: 'Носуха',
-      description: 'Милая и смешная',
+      name: 'Упоротая лиса Аня',
+      description: 'На ретроспективе в пятницу',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      name: 'Бородатый дельфин',
+      description: 'Злой',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      name: 'Хамелеон',
+      description: 'В любой непонятной ситуации меняет окрас с белого на красный',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      name: 'Кот в сапогах',
+      description: 'Большой и добрый',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      name: 'Мышь',
+      description: 'В тильте',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      name: 'Осел',
+      description: 'Необыный смех, щекочащий ушки',
       createdAt: new Date(),
       updatedAt: new Date()
     },

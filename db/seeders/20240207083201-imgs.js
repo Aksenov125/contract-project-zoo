@@ -78,6 +78,73 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date()
         },
+        {
+          url: "/img/vadim2.jpg",
+          animalId: 11,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/vadim1.jpg",
+          animalId: 11,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/vadim3.jpg",
+          animalId: 11,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/Sultan1.jpg",
+          animalId: 10,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/Sultan2.jpg",
+          animalId: 10,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/Anya1.jpg",
+          animalId: 7,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/Anya2.jpg",
+          animalId: 7,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/Vova1.jpg",
+          animalId: 9,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/Vova2.jpg",
+          animalId: 9,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/Sasha1.jpg",
+          animalId: 8,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          url: "/img/Sasha2.jpg",
+          animalId: 8,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        
       ],
       
     );

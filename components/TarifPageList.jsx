@@ -7,11 +7,13 @@ function TarifPageList({tarifs, user}) {
   return (
     <Layout>
         <Navbar user={user}></Navbar>
+     
      <div className="row">
         {tarifs.map((tarif) => (
             <TarifPage key={tarif.id} tarif={tarif} user={user}/>
         ))}
         </div>
+     
        
 
     </Layout>
