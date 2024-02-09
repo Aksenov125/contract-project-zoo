@@ -5,9 +5,9 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Animal extends Model {
     
-    static associate({Img}) {
+    static associate({Img, Comment}) {
       this.hasMany(Img, {foreignKey: 'animalId'})
-      
+      this.hasMany(Comment, {foreignKey: 'animalId'})
     }
   }
   Animal.init({

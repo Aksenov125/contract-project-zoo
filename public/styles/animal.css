@@ -1,3 +1,9 @@
+h1 {
+  font-size: 20px;
+}
+h1 {
+  font-size: 15px;
+}
 
 .card2 {
     width: 300px;
@@ -72,20 +78,19 @@
   
   .slider-container {
     position: relative;
-    width: 600px;
-    height: 400px;
     margin: 0 auto;
     overflow: hidden;
   }
   
   .slider {
     display: flex;
+    width: 400px;
     transition: transform 0.5s ease-in-out;
   }
   
   .slider img {
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    max-height: 100%;
     object-fit: cover;
   }
   
